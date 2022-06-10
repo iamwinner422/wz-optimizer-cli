@@ -1,13 +1,14 @@
 <?php
 
 namespace WzOptimizer;
-
+require_once 'src/Class/WzOptimizer.php';
 class CWzOptimizer{
     public function run(){
         #RECUPERATION DES ARGUMENTS
         $arguments = getopt("s:q:");
 
         if (sizeof($arguments) == 2){
+
             $opz = new WzOptimizer($arguments["s"], $arguments["q"]);
 
             if ($opz->check_s()){
