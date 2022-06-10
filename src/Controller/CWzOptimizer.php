@@ -38,7 +38,7 @@ class CWzOptimizer{
         }else{
             echo "\n";
             echo "WZ-OPTIMIZER\n";
-            echo " Utilisation: php wz-optimizer.php -s chemin/vers/le/fichier -q qualite\n";
+            echo " Utilisation: php main.php -s chemin/vers/le/fichier -q qualite\n";
         }
     }
 }
