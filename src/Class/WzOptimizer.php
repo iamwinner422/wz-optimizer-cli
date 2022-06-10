@@ -75,15 +75,20 @@ class WzOptimizer{
         }
     }
 
-    public function check_q(){
-        $dn = false;
+    public function check_q_n(){
         if (is_numeric($this->q)){
-            $quality_ = intval($this->q);
-            if ($quality_ < 0 || $quality_ > 9){
-                $dn = true;
-            }
+            return true;
         }
-        return $dn;
+        return false;
+    }
+
+    public function check_q_v(){
+        $quality_ = intval($this->q);
+        if ($quality_ < 0 || $quality_ > 9){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public function check_ext(){
@@ -99,7 +104,7 @@ class WzOptimizer{
         }
     }
 
-    public function opz(){
+    public function opz_(){
         switch ($this->ext){
             case 'jpeg':
             case 'jpg':
@@ -119,6 +124,8 @@ class WzOptimizer{
         imagewebp($image, $nouveauFichier, $this->q);
         imagedestroy($image);
         if(file_exists($nouveauFichier)){
+            echo "\n";
+            echo "Fichier optimisé: ".$nouveauFichier."\n";
             return true;
         }else{
             return false;
