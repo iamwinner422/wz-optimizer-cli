@@ -1,5 +1,5 @@
 # wz-optimizer-cli
-### PHP CLI image optimiser
+### PHP CLI image optimizer
 
 
 - FR: Utilisation: php main.php -s chemin/vers/l/image/a/optimiser -q qualite (0 à 9)
