@@ -95,7 +95,7 @@ class WzOptimizer{
         #VERIFICATION DE L'EXTENSION DU FICHIER SOURCE
         $file = explode(".", $this->s);
         $extension = end($file); #RECUPERATION DE L'EXTENTION
-        $allowTypes = array('jpg','png','jpeg');
+        $allowTypes = array('jpg','png','jpeg', 'PNG', 'JPEG', 'JPG');
         if(in_array($extension, $allowTypes)) {
             $this->ext = $extension;
             return true;
